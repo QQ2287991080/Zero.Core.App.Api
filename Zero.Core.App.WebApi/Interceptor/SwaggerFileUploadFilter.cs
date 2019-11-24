@@ -26,9 +26,9 @@ namespace Zero.Core.App.WebApi.Interceptor
             var fileParameters = context.ApiDescription.ActionDescriptor.Parameters.Where(n => n.ParameterType == typeof(IFormFile)).ToList();
             if (fileParameters.Count < 0)
             {
+                operation.Parameters.Clear();
                 return;
             }
-
             operation.Consumes.Add("multipart/form-data");
             foreach (var fileParameter in fileParameters)
             {

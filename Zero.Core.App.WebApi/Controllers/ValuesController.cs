@@ -2,11 +2,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Zero.Core.App.WebApi.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/Values")]
     [Produces("application/json")]
     public class ValuesController :ControllerBase
     {
@@ -23,7 +24,7 @@ namespace Zero.Core.App.WebApi.Controllers
         {
             return "value";
         }
-
+       
         // POST api/values
         [HttpPost]
         public void Post(Test test)
