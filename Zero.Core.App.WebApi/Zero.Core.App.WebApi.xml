@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Zero.Core.App.WebApi</name>
+    </assembly>
+    <members>
+        <member name="P:Zero.Core.App.WebApi.Controllers.ValuesController.Test.Age">
+            <summary>
+            姓名
+            </summary>
+        </member>
+        <member name="M:Zero.Core.App.WebApi.Interceptor.SwaggerFileUploadFilter.Apply(Swashbuckle.AspNetCore.Swagger.Operation,Swashbuckle.AspNetCore.SwaggerGen.OperationFilterContext)">
+            <summary>
+            应用过滤器
+            </summary>
+            <param name="operation"></param>
+            <param name="context"></param>
+        </member>
+    </members>
+</doc>
