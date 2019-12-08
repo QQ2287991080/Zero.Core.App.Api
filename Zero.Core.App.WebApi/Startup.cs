@@ -47,9 +47,9 @@ namespace Zero.Core.App.WebApi
                     TermsOfService = "None",
                     Contact = new Contact { Name = "Zero", Email = "2287991080@qq.com", Url = "http://www.baidu.com" }
                 });
-                i.OperationFilter<SwaggerFileUploadFilter>();
+                i.OperationFilter<SwaggerFileUploadFilter>();//swagger上传文件配置
 
-                //Set the comments path for the swagger json and ui.
+                //设置swagger备注
                 var basePath = PlatformServices.Default.Application.ApplicationBasePath;
                 var xmlPath = Path.Combine(basePath, "Zero.Core.App.WebApi.xml");
                 i.IncludeXmlComments(xmlPath);//文档中文提示
@@ -65,10 +65,10 @@ namespace Zero.Core.App.WebApi
             }
 
             app.UseMvc();
-
+            app.UseStaticFiles();
 
             app.UseSwagger();
-            // Enable middleware to serve swagger-ui (HTML, JS, CSS etc.), specifying the Swagger JSON endpoint.
+            // 使用swagger.json
             app.UseSwaggerUI(i =>
             {
                 i.SwaggerEndpoint("/swagger/v1/swagger.json", "Zero API V1");

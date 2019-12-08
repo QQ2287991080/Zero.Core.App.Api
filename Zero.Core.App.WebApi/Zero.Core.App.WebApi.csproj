@@ -7,7 +7,8 @@
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <NoWarn>1701;1702;1705;1591;</NoWarn>
-    <DocumentationFile>Z:\测试\Zero.Core.App.Api\Zero.Core.App.WebApi\Zero.Core.App.WebApi.xml</DocumentationFile>
+    <DocumentationFile>D:\后端文件\Zero.Core.App.Api\Zero.Core.App.WebApi\Zero.Core.App.WebApi.xml</DocumentationFile>
+    <OutputPath></OutputPath>
   </PropertyGroup>
 
   <ItemGroup>
@@ -18,4 +19,13 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="4.0.1" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Core.Tools\Core.Tools.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\Files\" />
+  </ItemGroup>
+
+  
 </Project>
